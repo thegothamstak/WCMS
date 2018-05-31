@@ -54,10 +54,10 @@
                             echo $day;
                             $day++;
                         }
-                    echo"</td>";
+                    echo"</td>\n";
                 }
-                echo"</tr>";
-                for($row = 0; $row < 4; $row++){
+                echo"</tr>\n";
+                for($row = 0; $row < 5; $row++){
                     echo "<tr>";
                     for($col = 0; $col < 7; $col++){
                         $bg = "Khaki";
@@ -69,9 +69,9 @@
                             echo $day;
                             $day++;
                         }
-                        echo "</td>";
+                        echo "</td>\n";
                     }
-                    echo "</tr>";
+                    echo "</tr>\n";
                 }
             ?>
             </table>
