@@ -17,12 +17,19 @@
                 background-color: powderblue;
             }
 
+            h3{
+                text-align: center;
+                width: 500px;
+                height: 30px;
+                background-color: powderblue;
+            }
+
         </style>
     </head>
     <body>
         <center>
             <h1>Calender</h1>
-            <br><br>
+            <br>
             <?php
                 $month = date("n");
                 $year = date("Y");
@@ -78,7 +85,7 @@
                 echo"<tr>";
                 for($i = 0; $i < 7; $i++){
                     $bg = "Khaki";
-                    if($day == $i && $day == date("j") && $mon == $curr_mon){
+                    if($day == $i && $day == date("j") && $mon == $curr_mon && $year == date('Y')){
                         $bg = "Lavender";
                     }
                     echo"<td bgcolor = \"$bg\">";
@@ -93,7 +100,7 @@
                     echo "<tr>";
                     for($col = 0; $col < 7; $col++){
                         $bg = "Khaki";
-                        if($day == date("j") && $mon == $curr_mon){
+                        if($day == date("j") && $mon == $curr_mon && $year == date('Y')){
                             $bg = "Lavender";
                         }
                         echo "<td bgcolor = \"$bg\">";
@@ -107,16 +114,11 @@
                 }
             ?>
             </table>
-            <br><br>
-            <table>
-                <tr>
-                    <?php
-                        $self = $_SERVER['PHP_SELF'];
-                        echo "<td bgcolor = \"powderblue\"><a href = \"$self?month=$pm&year=$py\">Previous</a></td>";
-                        echo "<td bgcolor = \"powderblue\"><a href = \"$self?month=$nm&year=$ny\">Next</a></td>";
-                    ?>
-                </tr>
-            </table>
+            <br>
+            <?php
+                $self = $_SERVER['PHP_SELF'];
+                echo "<h3><a href = \"$self?month=$pm&year=$py\">Previous</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href = \"$self?month=$nm&year=$ny\">Next</a></h3>";
+            ?>
         </center>
     </body>
 </html>
