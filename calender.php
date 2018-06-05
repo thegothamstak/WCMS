@@ -1,3 +1,8 @@
+<!--
+    PHP code to display the calendar of current month.
+    Author : Shripad Tak
+    Date : 28th June 2018
+--->
 <html>
     <head>
         <title>Calender</title>

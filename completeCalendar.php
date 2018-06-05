@@ -1,3 +1,8 @@
+<!--
+    PHP code to display the complete calendar of current year.
+    Author : Shripad Tak
+    Date : 31st May 2018
+--->
 <html>
     <head>
         <title>Complete Calendar</title>

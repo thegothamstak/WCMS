@@ -1,3 +1,8 @@
+<!--
+    PHP code to display the calendar of current month with options to traverse to previous and next months.
+    Author : Shripad Tak
+    Date : 5th June 2018
+--->
 <html>
     <head>
         <title>Calendar</title>
